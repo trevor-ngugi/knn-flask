@@ -19,7 +19,7 @@ def prediction():
     weight=float(request.form['weight'])
     arr=np.array([[height,weight]])
     pred=model.predict(arr)
-    return jsonify({'bmi result':str(pred)})
+    return jsonify({'bmi':str(pred)})
 
 @app.route("/aisha")
 def aisha():
