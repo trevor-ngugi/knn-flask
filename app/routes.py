@@ -1,4 +1,4 @@
-from flask import render_template,request
+from flask import render_template,request,jsonify
 from app import app
 import pickle
 import numpy as np
@@ -19,7 +19,7 @@ def prediction():
     weight=float(request.form['weight'])
     arr=np.array([[height,weight]])
     pred=model.predict(arr)
-    return render_template('prediction.html',data=pred)
+    return jsonify({'bmi result':str(pred)})
 
 @app.route("/aisha")
 def aisha():
