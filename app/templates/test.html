@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"rel="stylesheet"
+     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"crossorigin="anonymous">
+    <link rel="stylesheet"href="{{ url_for('static', filename='css/style.css') }}">
+    <title>BMI checker</title>
+  </head>
+  <body>
+    <h2>weight data Forms</h2>
+
+    
+    <h2 class="glow">
+        StretchIt, where your health matters the most <i class="fa fa-heart"></i>
+      </h2>
+      <div class="container" id="container">
+        <div class="form-container sign-in-container">
+            <form action="prediction" method="post">
+              <h1>Key in your details</h1>
+              <input type="text" placeholder="Gender (Male/ Female)" />
+              <input type="number" placeholder="Height in cm" />
+              <input type="number" placeholder="weight in kgs" />
+              <button type="submit" class="ghost" id="signUp">Submit</button>
+            </form>
+          </div>
+      </div>
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <div class="overlay2">
+              <h1 class="glow">Here are your results! {{prediction_text}}</h1>
+              <!--p>To keep connected with us please login with your personal info</p-->
+              <button class="ghost" id="signIn">Back</button>
+            </div>
+          </div>
+          <div class="overlay-panel overlay-right" style="font-size: larger">
+            <div class="overlay2">
+              <h2 class="glow">BMI CALCULATOR</h2>
+              <h4>Your health matters</h4>
+              <!--button class="ghost" id="signUp">Sign Up</button-->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      <script src="{{url_for('static', filename='js/script.js')}}"></script>
+  </body>
+</html>

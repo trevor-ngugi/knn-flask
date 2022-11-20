@@ -5,6 +5,10 @@ import numpy as np
 
 model=pickle.load(open('model.pkl','rb')) 
 @app.route('/')
+@app.route('/home')
+def home():
+    return render_template('home.html', title='Home',data='hey')
+
 @app.route('/index')
 def index():
     return render_template('index.html', title='Home',data='hey')
@@ -16,6 +20,10 @@ def prediction():
     arr=np.array([[height,weight]])
     pred=model.predict(arr)
     return render_template('prediction.html',data=pred)
+
+@app.route("/aisha")
+def aisha():
+    return render_template('test.html', title='aisha code')
 
 if __name__ == "__main__":
     app.run(debug=True)
