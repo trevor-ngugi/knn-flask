@@ -3,7 +3,7 @@ from app import app
 import pickle
 import numpy as np
 
-model=pickle.load(open('model.pkl','rb')) 
+model=pickle.load(open('modelmeans.pkl','rb')) 
 @app.route('/')
 @app.route('/home')
 def home():

@@ -46,11 +46,11 @@
             <!--input type="text" placeholder="BMI" />
             <input type="text" placeholder="description" /-->
            
-            {% if data==1 %}
-            <h2>Your BMI is : less than 18.5 </h2>
+            {% if data==0 %}
+            <h2>Your BMI is : okay </h2>
             <h2>You are Underweight </h2>
-            {% elif data==2 %}
-            <h2>Your BMI ranges betwen 18.5 - 24.9 </h2>
+            {% elif data==1 %}
+            <h2>Your BMI is too fat </h2>
             <h2>You are Normal weight </h2>
             {% elif data==3 %}
             <h2>Your BMI ranges betwen 25 - 29.9 </h2>
